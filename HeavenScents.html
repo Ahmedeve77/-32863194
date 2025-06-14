@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEAVENSCENTS - عرض خاص</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tac:\Users\USER\Downloads\HeavenScents\خط ابو حميد.ttfhoma', sans-c:\Users\USER\Downloads\HeavenScents\AH-kufi-new-2025-Regular.otfserif;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .header-top {
+      background-color: #c6921b;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 25px;
+      text-align: center;
+      width: 100%;
+    }
+    .sub-header {
+      color: #b78c1b;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+    }
+    .container {
+      text-align: center;
+      max-width: 500px;
+      padding: 20px;
+    }
+    h2 {
+      color: #b78c1b;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 1.6;
+    }
+    img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 0 0cap rgba(0,0,0,0.1);
+      margin: 15px 0;
+    }
+    .btn {
+      display: block;
+      width: 90%;
+      margin: 10px auto;
+      padding: 15px;
+      border-radius: 50px;
+      font-size: 1.1em;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .btn-book {
+      background-color: #b78c1b;
+      color: white;
+    }
+    .btn-book:hover {
+      background-color: #a57f18;
+    }
+    .btn-whatsapp {
+      background-color: white;
+      color: #25D366;
+      icon
+      border: 2px solid #25D366;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-whatsapp:hover {
+      background-color: #25D366;
+      color: white;
+    }
+    .btn-whatsapp svg {
+      width: 20px;
+      height: 20px;
+    }
+    .countdown {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #c6921b;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-top">التوصيل مجاناً لجميع المحافظات</div>
+  <div class="sub-header">الوكيل الرسمي في العراق – HEAVENSCENTS</div>
+
+  <img src="small-heaven-logo.png" alt="عرض عطر نتاع من HEAVENSCENTS" 
+       style="max-width: 250px; width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; margin: 20px auto 10px auto;">
+
+
+  <div class="container" data-aos="zoom-in">
+    <h2>
+      عرض خاص ولـفترة محدودة<br>
+      على عطر التاج من شركة HEAVENSCENTS
+    </h2>
+
+    <div class="countdown" id="countdown">ينتهي العرض خلال: 00:00:00</div>
+
+    <img src="c:\Users\USER\Downloads\HeavenScents\4444.png" alt="عرض عطر تاج من HEAVENSCENTS">
+
+    <a class="btn btn-book" href="https://wa.me/9647512351621" target="_blank">للحجز اضغط هنا</a>
+
+    <a class="btn btn-whatsapp" href="https://wa.me/9647512351621" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+        <path d="M380.9 97.1C339.3 55.5..."/>
+      </svg>
+      للاستفسار اضغط هنا
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    const countdownElement = document.getElementById('countdown');
+    const targetTime = new Date().getTime() + (2 * 60 * 60 * 1000); // ساعتين من الآن
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetTime - now;
+
+      if (distance < 0) {
+        countdownElement.innerHTML = "انتهى العرض!";
+        return;
+      }
+
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `ينتهي العرض خلال: ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
